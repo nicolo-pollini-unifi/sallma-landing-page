@@ -64,7 +64,7 @@ This project uses [Keystatic](https://keystatic.com/) for local content manageme
 
 ## 📄 License
 
-[Add License Information Here]
+This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](LICENSE) file for details.
 
 ---
 *Developed by the [Software Technologies Lab (STLab)](https://stlab.dinfo.unifi.it/) at the University of Florence.*

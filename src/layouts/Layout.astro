@@ -23,6 +23,20 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL("/og-image.png", Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL("/og-image.png", Astro.url)} />
 	</head>
 	<body
 		class="bg-gray-50 text-gray-900 font-sans antialiased selection:bg-indigo-500 selection:text-white"
@@ -78,7 +92,6 @@ const {
 								class="hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium transition-colors"
 								>Contributors</a
 							>
-							<!-- FIXME: repo is private -->
 							<a
 								href="https://github.com/STLab-UniFI/SALLMA"
 								target="_blank"
