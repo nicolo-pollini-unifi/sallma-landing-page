@@ -2,10 +2,15 @@
 // File: keystatic.config.ts
 import { config, fields, collection } from '@keystatic/core';
 
+const isDev = import.meta.env.DEV;
+
 export default config({
-  storage: {
-    kind: 'local',
-  },
+  storage: isDev
+    ? { kind: 'local' }
+    : {
+      kind: 'github',
+      repo: 'nicolo-pollini-unifi/sallma-landing-page'
+    },
   collections: {
     posts: collection({
       label: 'Posts',
