@@ -1,3 +1,5 @@
+import { env } from 'node:process';
+
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
@@ -6,8 +8,12 @@ import keystatic from '@keystatic/astro';
 import vercel from '@astrojs/vercel';
 import node from '@astrojs/node';
 
-// @ts-ignore
-const isVercel = !!(typeof process !== 'undefined' && process.env.VERCEL);
+const isVercel = !!(
+  env.VERCEL === '1' ||
+  env.VERCEL === 'true' ||
+  env.VERCEL_URL ||
+  env.NOW_BUILDER
+);
 
 // https://astro.build/config
 export default defineConfig({
